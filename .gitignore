@@ -1,0 +1,6 @@
+*.chi
+*.chs.h
+*.hi
+*.o
+.hsenv
+.stack-work
