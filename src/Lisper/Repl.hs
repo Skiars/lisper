@@ -19,7 +19,7 @@ runRepl = do
     runInputT settings (evalStateT loop [])
 
   where
-    loop :: MonadException m => StateT Env (InputT m) ()
+    loop :: StateT Env (InputT IO) ()
     loop =
         lift (getInputLine "λ ") >>= \case
             Nothing  -> return ()
